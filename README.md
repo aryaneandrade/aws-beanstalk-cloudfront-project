@@ -80,33 +80,68 @@ A solução contempla os seguintes componentes:
 
 ### 📐 Arquitetura da Solução
 
+> Diagrama geral da arquitetura cloud-native implementada, integrando Elastic Beanstalk, Amazon S3, CloudFront, ECR e RDS
+
 ![Arquitetura](assets/arquitetura.png)
 
 ---
 
 ### 🚀 Ambiente no Elastic Beanstalk
 
-![Beanstalk](assets/beanstalk.png)
+> Tela do ambiente configurado no Elastic Beanstalk com aplicação Docker em execução.
+
+![Ambiente Elastic Beanstalk](assets/ambiente.png)
 
 ---
 
-### 💾 Upload de Assets para o S3
+### 💾 Deploy de Assets Estáticos
 
-![S3](assets/s3.png)
+> Processo de build e deploy automatizado dos arquivos estáticos para o bucket S3.
+
+![Deploy de Assets](assets/deploy-assets.png)
+
+---
+
+### 🪣 Bucket Amazon S3
+
+> Visualização dos arquivos estáticos armazenados no bucket S3, prontos para distribuição.
+
+![Bucket S3](assets/bucket.png)
 
 ---
 
 ### 🌍 Distribuição via Amazon CloudFront
 
-![CloudFront](assets/cloudfront.png)
+> Configuração da distribuição e mapeamento do bucket S3 como origem, garantindo baixa latência e cache global.
+
+![CloudFront](assets/cdn.png)
 
 ---
 
-### 📊 Monitoramento com CloudWatch
+### ⚡ Validação de Latência com CloudFront
 
-![CloudWatch](assets/cloudwatch.png)
+> Testes de desempenho e latência evidenciam ganho significativo ao utilizar a CDN da AWS.
+
+![Teste de Latência](assets/teste-latencia.png)
 
 ---
+
+### 🧩 Integração com Banco de Dados RDS
+
+> Estruturação da aplicação com comunicação segura com banco de dados relacional no Amazon RDS.
+
+![RDS](assets/rds.png)
+
+---
+
+### 💻 Aplicação Web em Execução
+
+> Interface web acessível após o deploy bem-sucedido no Elastic Beanstalk.
+
+![Tela Web](assets/tela-web.png)
+
+---
+
 
 ## 📄 Licença
 
