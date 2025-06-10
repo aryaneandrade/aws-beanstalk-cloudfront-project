@@ -5,13 +5,13 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/aryaneandrade/aws-beanstalk-cloudfront-project)
 ![AWS](https://img.shields.io/badge/built%20with-AWS-orange?logo=amazonaws&logoColor=white)
 
-Este repositório documenta o desafio prático da **Mentoria Desafio Labs 2.0**, parte da **Formação AWS** conduzida por **Henrylle Maia**. O projeto tem como foco a criação de uma solução escalável e resiliente, unindo **Elastic Beanstalk, Docker e distribuição de conteúdo via CloudFront**, com automação de deploy e boas práticas em arquitetura cloud-native.
+Este repositório documenta o desafio prático da **Mentoria Desafio Labs 2.0**, parte da **Formação AWS** conduzida por **Henrylle Maia**. O projeto tem como foco a criação de uma solução escalável e resiliente, unindo **Elastic Beanstalk, Docker, Amazon RDS e distribuição de conteúdo via CloudFront**, com automação de deploy e boas práticas em arquitetura cloud-native.
 
 ---
 
 ## 🧠 Objetivo
 
-Criar uma aplicação containerizada com **deploy automatizado via AWS Elastic Beanstalk**, integrando **Amazon ECR**, **CloudWatch para monitoramento**, armazenamento de arquivos estáticos no **S3** e distribuição via **Amazon CloudFront**, promovendo desempenho otimizado, resiliência e observabilidade.
+Criar uma aplicação containerizada com **deploy automatizado via AWS Elastic Beanstalk**, integrando **Amazon ECR**, **CloudWatch para monitoramento**, **Amazon RDS para persistência de dados**, armazenamento de arquivos estáticos no **S3** e distribuição via **Amazon CloudFront**, promovendo desempenho otimizado, resiliência e observabilidade.
 
 ---
 
@@ -24,6 +24,7 @@ A solução contempla os seguintes componentes:
 - Logs e métricas monitorados via **Amazon CloudWatch**  
 - Assets estáticos hospedados no **Amazon S3**  
 - Distribuição de conteúdo via **Amazon CloudFront**  
+- Integração segura com banco de dados relacional no **Amazon RDS**  
 - Automação de processos com **Shell Scripts**  
 - Variáveis de ambiente sensíveis configuradas com segurança
 
@@ -50,6 +51,11 @@ A solução contempla os seguintes componentes:
 - Configuração de variáveis de ambiente (como URIs e keys sensíveis)  
 - Estruturação do repositório para reusabilidade e manutenção
 
+### Fase 5 – Integração com Banco de Dados
+- Criação e configuração de instância Amazon RDS (PostgreSQL/MySQL/etc)  
+- Definição de variáveis de ambiente para conexão segura  
+- Validação de comunicação entre a aplicação e o banco de dados
+
 ---
 
 ## 🛠️ Tecnologias e Serviços Utilizados
@@ -57,6 +63,7 @@ A solução contempla os seguintes componentes:
 | Categoria           | Tecnologias                                                                 |
 |---------------------|------------------------------------------------------------------------------|
 | Containers          | Docker, Amazon ECR, AWS Elastic Beanstalk                                   |
+| Banco de Dados      | Amazon RDS                                                                   |
 | Armazenamento       | Amazon S3                                                                    |
 | Distribuição (CDN)  | Amazon CloudFront                                                            |
 | Monitoramento       | AWS CloudWatch                                                               |
@@ -70,9 +77,10 @@ A solução contempla os seguintes componentes:
 - Deploy automatizado e versionado com Docker no Elastic Beanstalk  
 - Integração eficiente com o Amazon ECR para gerenciamento de imagens  
 - Observabilidade robusta com métricas e logs no CloudWatch  
-- Distribuição de conteúdo via CloudFront, com menor latência e alta performance  
 - Armazenamento seguro de arquivos no Amazon S3  
+- Distribuição de conteúdo via CloudFront, com menor latência e alta performance  
 - Scripts Shell reutilizáveis para automação dos processos de deploy  
+- Integração funcional com banco de dados RDS para persistência segura e escalável de dados  
 
 ---
 
@@ -142,7 +150,6 @@ A solução contempla os seguintes componentes:
 
 ---
 
-
 ## 📄 Licença
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais como parte da formação profissional em AWS. Sem fins comerciais.
@@ -158,4 +165,4 @@ Se quiser trocar ideias sobre aplicações gerenciadas, CDN, automação e arqui
 
 ---
 
-> 🔥 Projeto desenvolvido por Aryane, consolidando conhecimentos em Elastic Beanstalk, Docker, S3, CloudFront, ECR e CloudWatch na AWS. Foco em escalabilidade, performance, segurança e automação.
+> 🔥 Projeto desenvolvido por Aryane, consolidando conhecimentos em Elastic Beanstalk, Docker, S3, CloudFront, ECR, RDS e CloudWatch na AWS. Foco em escalabilidade, performance, segurança e automação.
